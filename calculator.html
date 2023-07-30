@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calculator</title>
+   <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+   <center>
+   <div class="calculator">
+
+      <h1>SimpleCalculator</h1>
+      <hr color="black">
+      <h2>Perform Arithmetic Opertaions</h2>
+
+      <div class="cont">
+      <b>Num 1:</b> <input type="text" id="num1">
+      <b>Num 2:</b> <input type="text" id="num2">
+      <hr color="black">
+      <input type="button" value="+" onclick="add()">
+      <input type="button" value="-" onclick="subtract()">
+      <input type="button" value="*" onclick="multiply()">
+      <input type="button" value="/" onclick="divide()">
+      <hr color="black">
+      <b> Result: </b><input type="button" id="result" style="width: 70px; height: 50px;" readonly>
+   </div>
+   </div>
+</center>
+   <script>
+
+      add = () => {
+         let n1 = parseFloat(document.getElementById("num1").value);
+         let n2 = parseFloat(document.getElementById("num2").value);
+         res = n1 + n2;
+         document.getElementById("result").value = res;
+      }
+      subtract = () => {
+         let n1 = document.getElementById("num1").value;
+         let n2 = document.getElementById("num2").value;
+         res = n1 - n2;
+         document.getElementById("result").value = res;
+      }
+      multiply = () => {
+         let n1 = document.getElementById("num1").value;
+         let n2 = document.getElementById("num2").value;
+         res = n1 * n2;
+         document.getElementById("result").value = res;
+      }
+      divide = () => {
+         let n1 = document.getElementById("num1").value;
+         let n2 = document.getElementById("num2").value;
+         res = n1 / n2;
+         document.getElementById("result").value = res;
+      }
+
+   </script>
+
+</body>
+
+</html>
